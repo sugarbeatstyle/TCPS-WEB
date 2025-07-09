@@ -35,7 +35,7 @@ const GameSection: React.FC = () => {
   const [gameWon, setGameWon] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const startGame = () => {
     const shuffledCards = [...initialImages, ...initialImages]
