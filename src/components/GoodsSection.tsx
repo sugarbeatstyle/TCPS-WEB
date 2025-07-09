@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button, Image, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Fade } from 'react-awesome-reveal';
 
 const GoodsSection: React.FC = () => {
