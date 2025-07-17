@@ -11,7 +11,7 @@ const Post = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[slug.current == "${slug}"]{
+        `*[_type == "post" && slug.current == "${slug}"]{
           title,
           _id,
           slug,
@@ -35,8 +35,36 @@ const Post = () => {
   return (
     <article>
       <h1>{post.title}</h1>
-      <img src={post.mainImage.asset.url} alt={post.title} />
-      <BlockContent blocks={post.body} projectId="eheqd7ml" dataset="production" />
+      {post.mainImage && post.mainImage.asset && (
+        <img src={post.mainImage.asset.url} alt={post.title} />
+      )}
+      {post.body && (
+        <BlockContent
+          blocks={post.body}
+          projectId="eheqd7ml"
+          dataset="production"
+          serializers={{
+            types: {
+              block: (props: any) => {
+                switch (props.node.style) {
+                  case 'h1':
+                    return <h1>{props.children}</h1>;
+                  case 'h2':
+                    return <h2>{props.children}</h2>;
+                  case 'h3':
+                    return <h3>{props.children}</h3>;
+                  case 'h4':
+                    return <h4>{props.children}</h4>;
+                  case 'blockquote':
+                    return <blockquote>{props.children}</blockquote>;
+                  default:
+                    return <p>{props.children}</p>;
+                }
+              },
+            },
+          }}
+        />
+      )}
     </article>
   );
 };
