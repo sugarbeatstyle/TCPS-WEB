@@ -291,3 +291,31 @@ section h2 {
   max-height: 90%;
   object-fit: contain;
 }
+
+/* Blog Styles */
+.blog-thumbnail {
+  width: 80%; /* Adjust as needed, e.g., 80% */
+  height: 200px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+.blog-title {
+  font-size: 1.25rem; /* Adjust as needed */
+  font-weight: bold;
+}
+
+.blog-card {
+  background-color: #212529; /* Darker background for the card */
+  border: 1px solid #495057; /* Subtle border */
+}
+
+.btn-blog-readmore {
+  background-color: #b060b0; /* Medium purple */
+  border-color: #b060b0; /* Medium purple */
+  color: #fff; /* White text */
+}
+
+.btn-blog-readmore:hover {
+  background-color: #9a4a9a; /* Slightly darker purple on hover */
+  border-color: #9a4a9a; /* Slightly darker purple on hover */
+}
