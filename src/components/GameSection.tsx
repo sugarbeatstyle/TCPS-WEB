@@ -199,6 +199,11 @@ const GameSection: React.FC = () => {
             </div>
           )}
         </Fade>
+        <div className="text-center mt-5">
+          <a href="https://note.com/maychan_sheep/m/m4f953b4f1557" target="_blank" rel="noopener noreferrer">
+            <img src="https://assets.st-note.com/img/1753236126-tb6dOTl0ZkWPUEIJyVe9XHiL.png" alt="Game Banner" className="img-fluid game-banner" />
+          </a>
+        </div>
       </Container>
     </section>
   );

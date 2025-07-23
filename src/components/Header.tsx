@@ -17,7 +17,7 @@ const Header: React.FC = () => {
             <Nav.Link href="#goods">Goods</Nav.Link>
             <Nav.Link href="#faq">FAQ</Nav.Link>
             <Nav.Link href="#game">Game</Nav.Link>
-            <Nav.Link as={Link} to="/blog">Blog</Nav.Link> 
+             
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>

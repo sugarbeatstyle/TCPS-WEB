@@ -292,30 +292,39 @@ section h2 {
   object-fit: contain;
 }
 
-/* Blog Styles */
-.blog-thumbnail {
-  width: 80%; /* Adjust as needed, e.g., 80% */
-  height: 200px; /* Adjust as needed */
-  object-fit: cover;
+.discography-banner {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease; /* Add transition for smooth hover */
 }
 
-.blog-title {
-  font-size: 1.25rem; /* Adjust as needed */
-  font-weight: bold;
+.discography-banner:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
-.blog-card {
-  background-color: #212529; /* Darker background for the card */
-  border: 1px solid #495057; /* Subtle border */
+@media (max-width: 767.98px) {
+  .discography-banner {
+    width: 100%;
+  }
 }
 
-.btn-blog-readmore {
-  background-color: #b060b0; /* Medium purple */
-  border-color: #b060b0; /* Medium purple */
-  color: #fff; /* White text */
+.game-banner {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.btn-blog-readmore:hover {
-  background-color: #9a4a9a; /* Slightly darker purple on hover */
-  border-color: #9a4a9a; /* Slightly darker purple on hover */
+.game-banner:hover {
+  transform: scale(1.02);
 }
+
+@media (max-width: 767.98px) {
+  .game-banner {
+    width: 100%;
+  }
+}
+
+
+
