@@ -54,16 +54,16 @@ const GameSection: React.FC = () => {
     setGameStarted(true);
     setTimeElapsed(0);
     if (timerRef.current) {
-      clearInterval(timerRef.current);
+      window.clearInterval(timerRef.current);
     }
-    timerRef.current = setInterval(() => {
+    timerRef.current = window.setInterval(() => {
       setTimeElapsed(prevTime => prevTime + 1);
     }, 1000);
   };
 
   const resetGame = () => {
     if (timerRef.current) {
-      clearInterval(timerRef.current);
+      window.clearInterval(timerRef.current);
     }
     setGameStarted(false);
     setCards([]); // Clear cards to show start button
@@ -103,7 +103,7 @@ const GameSection: React.FC = () => {
     if (matchedCards.length === cards.length && cards.length > 0) {
       setGameWon(true);
       if (timerRef.current) {
-        clearInterval(timerRef.current);
+        window.clearInterval(timerRef.current);
       }
     }
   }, [matchedCards, cards]);
@@ -112,7 +112,7 @@ const GameSection: React.FC = () => {
   useEffect(() => {
     return () => {
       if (timerRef.current) {
-        clearInterval(timerRef.current);
+        window.clearInterval(timerRef.current);
       }
     };
   }, []);
@@ -199,6 +199,11 @@ const GameSection: React.FC = () => {
             </div>
           )}
         </Fade>
+        <div className="text-center mt-5">
+          <a href="https://note.com/maychan_sheep/m/m4f953b4f1557" target="_blank" rel="noopener noreferrer">
+            <img src="https://assets.st-note.com/img/1753236126-tb6dOTl0ZkWPUEIJyVe9XHiL.png" alt="Game Banner" className="img-fluid game-banner" />
+          </a>
+        </div>
       </Container>
     </section>
   );

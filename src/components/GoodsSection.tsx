@@ -57,6 +57,11 @@ const GoodsSection: React.FC = () => {
     <section id="goods" className="py-5 bg-dark text-white">
       <Container>
         <Fade direction="up" triggerOnce>
+          <div className="text-center mb-5">
+            <a href="https://royal-pisces-bdd.notion.site/Discography-TOKYO-Chill-Pop-Style-234b09b35af980a2b0d9c954b4c4eecd" target="_blank" rel="noopener noreferrer">
+              <img src="https://assets.st-note.com/img/1753235226-uhnkgH2ErzdX4qjtUTwsRlQo.png" alt="Discography Banner" className="img-fluid discography-banner" />
+            </a>
+          </div>
           <h2 className="text-center mb-4">Goods</h2>
           <Row className="g-4">
             {goodsItems.map((item) => (
