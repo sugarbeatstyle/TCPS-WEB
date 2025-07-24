@@ -291,3 +291,11 @@ section h2 {
   max-height: 90%;
   object-fit: contain;
 }
+
+.banner-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-hover:hover {
+  transform: scale(1.05);
+}
